@@ -1,4 +1,4 @@
-import 'package:e_panchayat/Home/main_home.dart';
+import 'package:e_panchayat/main_home.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/material.dart';
 

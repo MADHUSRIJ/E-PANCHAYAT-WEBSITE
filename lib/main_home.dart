@@ -1,9 +1,9 @@
 
-import 'package:e_panchayat/Home/Home_Sub/sub_home.dart';
-import 'package:e_panchayat/Home/about_us.dart';
-import 'package:e_panchayat/Home/contact_us.dart';
-import 'package:e_panchayat/Home/sitemap.dart';
-import 'package:e_panchayat/Home/termsandconditions.dart';
+import 'package:e_panchayat/Home/sub_home.dart';
+import 'package:e_panchayat/about_us.dart';
+import 'package:e_panchayat/contact_us.dart';
+import 'package:e_panchayat/sitemap.dart';
+import 'package:e_panchayat/termsandconditions.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
