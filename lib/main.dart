@@ -1,9 +1,18 @@
 import 'package:e_panchayat/main_home.dart';
+import 'package:e_panchayat/provider.dart';
 import 'package:e_panchayat/sizeconfig.dart';
+import 'package:e_panchayat/style/appState.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( ChangeNotifierProvider<AppStateNotifier>(
+    create: (context) => AppStateNotifier(),
+    child: const  MaterialApp(
+      home: MyApp(),
+      debugShowCheckedModeBanner: false,
+    ),
+  ),);
 }
 
 class MyApp extends StatelessWidget {
@@ -12,9 +21,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Helper(),
-      debugShowCheckedModeBanner: false,
+    SizeConfig.init(context);
+
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<provider>.value(value: (provider())),
+      ],
+      child: Consumer<AppStateNotifier>(builder: (context, appState, child) {
+        return const MaterialApp(
+          home: Helper(),
+          debugShowCheckedModeBanner: false,
+        );
+      }),
     );
   }
 }

@@ -1,4 +1,5 @@
 
+import 'package:e_panchayat/Home/directories.dart';
 import 'package:e_panchayat/Home/sub_home.dart';
 import 'package:e_panchayat/about_us.dart';
 import 'package:e_panchayat/contact_us.dart';
@@ -92,7 +93,7 @@ class _HomeState extends State<Home> {
                 Container(
                     height: SizeConfig.height!*75, //height of TabBarView
                     child: const TabBarView(children: <Widget>[
-                      HomeSub(),
+                      directory(),
                       About(),
                       TerAndCon(),
                       Sitemap(),
