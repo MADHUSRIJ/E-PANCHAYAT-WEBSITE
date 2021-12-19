@@ -1,6 +1,9 @@
-import 'package:e_panchayat/Home/Birth_Details/birth_home.dart';
-import 'package:e_panchayat/Home/sub_home.dart';
-import 'package:e_panchayat/provider.dart';
+
+import 'package:e_panchayat/Providers/provider.dart';
+import 'package:e_panchayat/Screens/Home/Birth_Details/apply_birth.dart';
+import 'package:e_panchayat/Screens/Home/Birth_Details/birth_home.dart';
+import 'package:e_panchayat/Screens/Home/Birth_Details/generate_birth.dart';
+import 'package:e_panchayat/Screens/Home/sub_home.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,12 +26,16 @@ class _directoryState extends State<directory> {
               horizontal: SizeConfig.width! * 10,
               vertical: SizeConfig.height! * 0.1),
           child: context.watch<provider>().Page == "0"
-              ? HomeSub()
+              ? const HomeSub()
               : context.watch<provider>().Page == "10"
-                  ? BirthHome()
-                  : const Center(
-                      child: Text("Dummy"),
-                    )),
+                  ? const BirthHome()
+                  : context.watch<provider>().Page == "11"
+                      ? const ApplyBirth()
+                      : context.watch<provider>().Page == "12"
+                          ? const GenerateBirth()
+                          : const Center(
+                              child: Text("Dummy"),
+                            )),
     ));
   }
 }

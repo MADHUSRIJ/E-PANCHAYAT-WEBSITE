@@ -36,6 +36,23 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyAadkQPmSzBIpF-SSdA2S9yX-Qb_Z8R2mk",
+    authDomain: "e-panchayat-aee0b.firebaseapp.com",
+    projectId: "e-panchayat-aee0b",
+    storageBucket: "e-panchayat-aee0b.appspot.com",
+    messagingSenderId: "559534424969",
+    appId: "1:559534424969:web:9b05ea7222183d0de55758",
+    measurementId: "G-HBZHZLGESG"
+  };
+
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;

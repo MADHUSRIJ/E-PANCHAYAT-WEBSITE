@@ -1,6 +1,6 @@
 
 import 'package:provider/provider.dart';
-import 'package:e_panchayat/provider.dart';
+import 'package:e_panchayat/Providers/provider.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/material.dart';
 
