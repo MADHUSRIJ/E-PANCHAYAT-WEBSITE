@@ -154,10 +154,51 @@ class BirthReq with ChangeNotifier{
     notifyListeners();
   }
 
+  Future<void> get_data() async{
+    try{
+      final DocumentSnapshot snap = await FirebaseFirestore.instance
+          .collection("Birth Certificate")
+          .doc(this._email+" "+this._childname)
+          .get();
+      this._district = snap['District'];
+      this._townpanchayat = snap['Town Panchayat'];
+      this._mobile = snap['Mobile Number'];
+      this._email = snap['Email'];
+
+      this._childname = snap['Child Name'];
+      this._gender = snap['Gender'];
+      this._dob = snap['DOB'];
+      this._ide = snap['Identification'];
+
+      this._fname = snap['Father Name'];
+      this._mname= snap['Mother Name'];
+      this._fage = snap['Father Age'];
+      this._mage = snap['Mother Age'];
+      this._focc = snap['Father Occ'];
+      this._mocc = snap['Mother Occ'];
+      this._add = snap['Address'];
+      this._pincode = snap['Pincode'];
+
+      this._weight = snap['Weight'];
+      this._religion = snap['Religion'];
+      this._deliver = snap['Delivery'];
+      this._place = snap['Place'];
+
+    }
+    catch(exception){
+      print("Get Error === "+exception.toString());
+    }
+  }
+
+
+
+
   Future<void> set_data() async{
       print("Heyhey");
+      print("== DISTRICT =="+this._district);
+      print("== PINCODE =="+this._pincode);
       try{
-        await FirebaseFirestore.instance.collection("Birth Registration").doc().set(
+        await FirebaseFirestore.instance.collection("Birth Registration").doc(this._email+" "+this._childname).set(
             {
               "District" : this._district,
               "Town Panchayat" : this._townpanchayat,

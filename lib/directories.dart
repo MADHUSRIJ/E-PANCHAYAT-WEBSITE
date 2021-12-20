@@ -1,7 +1,7 @@
-
 import 'package:e_panchayat/Providers/provider.dart';
 import 'package:e_panchayat/Screens/Home/Birth_Details/apply_birth.dart';
 import 'package:e_panchayat/Screens/Home/Birth_Details/birth_home.dart';
+import 'package:e_panchayat/Screens/Home/Birth_Details/birthcertificate.dart';
 import 'package:e_panchayat/Screens/Home/Birth_Details/generate_birth.dart';
 import 'package:e_panchayat/Screens/Home/sub_home.dart';
 import 'package:e_panchayat/sizeconfig.dart';
@@ -33,9 +33,11 @@ class _directoryState extends State<directory> {
                       ? const ApplyBirth()
                       : context.watch<provider>().Page == "12"
                           ? const GenerateBirth()
-                          : const Center(
-                              child: Text("Dummy"),
-                            )),
+                          : context.watch<provider>().Page == "13"
+                              ? const BirthCerti()
+                              : const Center(
+                                  child: Text("Dummy"),
+                                )),
     ));
   }
 }

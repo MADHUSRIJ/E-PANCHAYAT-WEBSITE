@@ -3,7 +3,6 @@ import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Sitemap extends StatefulWidget {
   const Sitemap({Key? key}) : super(key: key);
@@ -68,7 +67,7 @@ class _SitemapState extends State<Sitemap> {
                     SizedBox(width: SizeConfig.width! * 1,),
                     Text(
                       "Site Map",
-                      style: GoogleFonts.poppins(
+                      style: TextStyle(
                           fontSize: SizeConfig.height! * 2.2,
                           color: Colors.white,
                           fontWeight: FontWeight.w500),
@@ -114,13 +113,13 @@ class _SitemapState extends State<Sitemap> {
                                     height: SizeConfig.height! * 10,
                                     width: SizeConfig.width! * 25,
                                     child: Text(
-                                      "E-Panchyat",
+                                      "E-PANCHAYAT",
                                       style: TextStyle(
-                                          fontSize: SizeConfig.height! * 2.5,
-                                          letterSpacing: 2,
-                                          decoration: TextDecoration.underline,
+                                          fontSize:
+                                          SizeConfig.height! * 2.5,
                                           color: Colors.black,
-                                          fontWeight: FontWeight.w800),
+                                          letterSpacing: 1,
+                                          fontWeight: FontWeight.w500),
                                     ),
                                   )
                                 : Container(
@@ -145,12 +144,12 @@ class _SitemapState extends State<Sitemap> {
                                             padding: EdgeInsets.only(right: 15),
                                             child: Text(
                                               "E-PANCHAYAT",
-                                              style: GoogleFonts.poppins(
+                                              style: TextStyle(
                                                   fontSize:
-                                                      SizeConfig.height! * 3,
+                                                      SizeConfig.height! * 2.5,
                                                   color: Colors.black,
                                                   letterSpacing: 1,
-                                                  fontWeight: FontWeight.w600),
+                                                  fontWeight: FontWeight.w500),
                                             ),
                                           ),
                                         ),
@@ -243,14 +242,14 @@ class _SitemapState extends State<Sitemap> {
                                                                 AnimatedSizeAndFade(
                                                                   child: tooglebd
                                                                       ? Text(
-                                                                          "Birth Details",
-                                                                          textAlign:
-                                                                              TextAlign.left,
-                                                                          style: TextStyle(
-                                                                              fontSize: SizeConfig.height! * 2.5,
-                                                                              color: Colors.black,
-                                                                              fontWeight: FontWeight.w600),
-                                                                        )
+                                                                    "BIRTH DETAILS",
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                        SizeConfig.height! * 2.1,
+                                                                        color: Colors.black,
+                                                                        letterSpacing: 1,
+                                                                        fontWeight: FontWeight.w500),
+                                                                  )
                                                                       : Container(
                                                                           height:
                                                                               SizeConfig.height! * 10,
@@ -267,7 +266,12 @@ class _SitemapState extends State<Sitemap> {
                                                                                   padding: EdgeInsets.only(right: 15),
                                                                                   child: Text(
                                                                                     "BIRTH DETAILS",
-                                                                                    style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 2.2, color: Colors.black, letterSpacing: 1, fontWeight: FontWeight.w600),
+                                                                                    style: TextStyle(
+                                                                                        fontSize:
+                                                                                        SizeConfig.height! * 2.1,
+                                                                                        color: Colors.black,
+                                                                                        letterSpacing: 1,
+                                                                                        fontWeight: FontWeight.w500),
                                                                                   ),
                                                                                 ),
                                                                               ),
@@ -275,14 +279,14 @@ class _SitemapState extends State<Sitemap> {
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Apply Birth Registration",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Generate Birth Details",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                             ],
@@ -335,14 +339,14 @@ class _SitemapState extends State<Sitemap> {
                                                                 AnimatedSizeAndFade(
                                                                   child: toogledd
                                                                       ? Text(
-                                                                          "Death Details",
-                                                                          textAlign:
-                                                                              TextAlign.left,
-                                                                          style: TextStyle(
-                                                                              fontSize: SizeConfig.height! * 2.5,
-                                                                              color: Colors.black,
-                                                                              fontWeight: FontWeight.w600),
-                                                                        )
+                                                                    "DEATH DETAILS",
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                        SizeConfig.height! * 2.1,
+                                                                        color: Colors.black,
+                                                                        letterSpacing: 1,
+                                                                        fontWeight: FontWeight.w500),
+                                                                  )
                                                                       : Container(
                                                                           height: SizeConfig.height! * 12,
                                                                           width: SizeConfig.width! * 20,
@@ -356,7 +360,12 @@ class _SitemapState extends State<Sitemap> {
                                                                                   padding: EdgeInsets.only(right: 15),
                                                                                   child: Text(
                                                                                     "DEATH DETAILS",
-                                                                                    style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 2, color: Colors.black, letterSpacing: 1, fontWeight: FontWeight.w600),
+                                                                                    style: TextStyle(
+                                                                                        fontSize:
+                                                                                        SizeConfig.height! * 2.1,
+                                                                                        color: Colors.black,
+                                                                                        letterSpacing: 1,
+                                                                                        fontWeight: FontWeight.w500),
                                                                                   ),
                                                                                 ),
                                                                               ),
@@ -364,21 +373,21 @@ class _SitemapState extends State<Sitemap> {
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Apply Death Registration",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Generate Death Details",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Property Tax - Tax Calculator",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                             ],
@@ -430,14 +439,14 @@ class _SitemapState extends State<Sitemap> {
                                                                 AnimatedSizeAndFade(
                                                                   child: tooglewc
                                                                       ? Text(
-                                                                          "Water Charges",
-                                                                          textAlign:
-                                                                              TextAlign.left,
-                                                                          style: TextStyle(
-                                                                              fontSize: SizeConfig.height! * 2.5,
-                                                                              color: Colors.black,
-                                                                              fontWeight: FontWeight.w600),
-                                                                        )
+                                                                    "WATER CHARGES",
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                        SizeConfig.height! * 2.1,
+                                                                        color: Colors.black,
+                                                                        letterSpacing: 1,
+                                                                        fontWeight: FontWeight.w500),
+                                                                  )
                                                                       : Container(
                                                                           height: SizeConfig.height! * 18,
                                                                           width: SizeConfig.width! * 20,
@@ -451,7 +460,12 @@ class _SitemapState extends State<Sitemap> {
                                                                                   padding: EdgeInsets.only(right: 15),
                                                                                   child: Text(
                                                                                     "WATER CHARGES",
-                                                                                    style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 2.2, color: Colors.black, letterSpacing: 1, fontWeight: FontWeight.w600),
+                                                                                    style: TextStyle(
+                                                                                        fontSize:
+                                                                                        SizeConfig.height! * 2.1,
+                                                                                        color: Colors.black,
+                                                                                        letterSpacing: 1,
+                                                                                        fontWeight: FontWeight.w500),
                                                                                   ),
                                                                                 ),
                                                                               ),
@@ -459,35 +473,40 @@ class _SitemapState extends State<Sitemap> {
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Apply New Water Connection",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Track New Water Connection Status",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 View Payment Status",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "📁 Pay Water Charges",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(fontSize: SizeConfig.height! * 1.4, color: Colors.black, fontWeight: FontWeight.w600),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 alignment: Alignment.centerLeft,
                                                                                 child: Text(
                                                                                   "DEPARTMENT LOGIN",
-                                                                                  style: GoogleFonts.poppins(fontSize: SizeConfig.height! * 2, color: Colors.black, fontWeight: FontWeight.w600),
+                                                                                  style: TextStyle(
+                                                                                      fontSize:
+                                                                                      SizeConfig.height! * 2.1,
+                                                                                      color: Colors.black,
+                                                                                      letterSpacing: 1,
+                                                                                      fontWeight: FontWeight.w500),
                                                                                 ),
                                                                               ),
                                                                             ],
