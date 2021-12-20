@@ -42,6 +42,7 @@ dependencies:
   firebase_storage: ^10.0.3
   firebase_analytics:
   google_fonts:
+  animated_size_and_fade:
 
 dev_dependencies:
   flutter_test:

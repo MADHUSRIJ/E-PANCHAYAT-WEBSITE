@@ -1,4 +1,8 @@
+import 'package:animated_size_and_fade/animated_size_and_fade.dart';
+import 'package:e_panchayat/sizeconfig.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Sitemap extends StatefulWidget {
   const Sitemap({Key? key}) : super(key: key);
@@ -8,14 +12,523 @@ class Sitemap extends StatefulWidget {
 }
 
 class _SitemapState extends State<Sitemap> {
+  late bool toogle;
+  late bool tooglehome;
+  late bool tooglebd;
+  late bool toogledd;
+  late bool tooglewc;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    toogle = true;
+    tooglehome = true;
+    tooglebd = true;
+    toogledd = true;
+    tooglewc = true;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
         child: Scaffold(
-          body: Center(
-            child: Text("Site Map"),
-          ),
-        ));
+          backgroundColor: Colors.white,
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        margin: EdgeInsets.symmetric(
+            horizontal: SizeConfig.width! * 15,
+            vertical: SizeConfig.height! * 5),
+        color: Colors.white,
+        child: Column(
+          children: [
+            Row(
+              children: [
+                GestureDetector(
+                    onTap: () {
+                      if (toogle == true) {
+                        setState(() {
+                          toogle = false;
+                          print(toogle);
+                        });
+                      } else {
+                        setState(() {
+                          toogle = true;
+                          print(toogle);
+                        });
+                      }
+                    },
+                    child: Icon(
+                      Icons.chevron_right_outlined,
+                      size: SizeConfig.height! * 3.5,
+                      color: Color(0xff223E98),
+                    )),
+                SizedBox(
+                  width: SizeConfig.width! * 3,
+                ),
+                AnimatedSizeAndFade(
+                  child: toogle == true
+                      ? Container(
+                    alignment: Alignment.centerLeft,
+                    height: SizeConfig.height! * 10,
+                    width: SizeConfig.width! * 25,
+                    child: Text(
+                      "E-Panchyat",
+                      style: TextStyle(
+                          fontSize: SizeConfig.height! * 2.5,
+                          letterSpacing: 2,
+                          decoration: TextDecoration.underline,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w800),
+                    ),
+                  )
+                      : Container(
+                    alignment: Alignment.center,
+                    height: SizeConfig.height! * 60,
+                    width: SizeConfig.width! * 30,
+                    margin: EdgeInsets.all(8),
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(3),
+                        border: Border.all(width: 0.2,color: Colors.grey)
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 15),
+                            child: Text(
+                              "E-PANCHAYAT",
+                              style: GoogleFonts.poppins(
+                                  fontSize: SizeConfig.height! * 3,
+                                  color: Colors.black,
+                                  letterSpacing: 1,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Row(
+                            children: [
+                              GestureDetector(
+                                  onTap: () {
+                                    if (tooglehome == true) {
+                                      setState(() {
+                                        tooglehome = false;
+                                      });
+                                    } else {
+                                      setState(() {
+                                        tooglehome = true;
+                                      });
+                                    }
+                                  },
+                                  child: Icon(
+                                    Icons.chevron_right_outlined,
+                                    size: SizeConfig.height! * 3.5,
+                                    color: Color(0xff223E98),
+                                  )),
+                              SizedBox(
+                                width: SizeConfig.width! * 1,
+                              ),
+                              AnimatedSizeAndFade(
+                                child: tooglehome ? Text(
+                                  "Home",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontSize: SizeConfig.height! * 2,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w800),
+                                ): Container(
+                                  height: SizeConfig.height! * 40,
+                                  width: SizeConfig.width! * 25,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          GestureDetector(
+                                              onTap: () {
+                                                if (tooglebd == true) {
+                                                  setState(() {
+                                                    tooglebd = false;
+                                                  });
+                                                } else {
+                                                  setState(() {
+                                                    tooglebd = true;
+                                                  });
+                                                }
+                                              },
+                                              child: Icon(
+                                                Icons.chevron_right_outlined,
+                                                size: SizeConfig.height! * 3.5,
+                                                color: Color(0xff223E98),
+                                              )),
+                                          SizedBox(
+                                            width: SizeConfig.width! * 1,
+                                          ),
+                                          AnimatedSizeAndFade(
+                                            child: tooglebd ? Text(
+                                              "Birth Details",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                  fontSize: SizeConfig.height! * 2.5,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w600),
+                                            ): Container(
+                                              height: SizeConfig.height! * 10,
+                                              width: SizeConfig.width! * 20,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                children: [
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Padding(
+                                                      padding: EdgeInsets.only(right: 15),
+                                                      child: Text(
+                                                        "BIRTH DETAILS",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 2.2,
+                                                            color: Colors.black,
+                                                            letterSpacing: 1,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Text(
+                                                      "📁 Apply Birth Registration",
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: SizeConfig.height! * 1.4,
+                                                          color: Colors.black,
+                                                          fontWeight: FontWeight.w600),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    alignment: Alignment.centerLeft,
+                                                    child: Text(
+                                                      "📁 Generate Birth Details",
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: SizeConfig.height! * 1.4,
+                                                          color: Colors.black,
+                                                          fontWeight: FontWeight.w600),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            fadeDuration: const Duration(milliseconds: 300),
+                                            sizeDuration: const Duration(milliseconds: 600),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          GestureDetector(
+                                              onTap: () {
+                                                if (toogledd == true) {
+                                                  setState(() {
+                                                    toogledd = false;
+                                                  });
+                                                } else {
+                                                  setState(() {
+                                                    toogledd = true;
+                                                  });
+                                                }
+                                              },
+                                              child: Icon(
+                                                Icons.chevron_right_outlined,
+                                                size: SizeConfig.height! * 3.5,
+                                                color: Color(0xff223E98),
+                                              )),
+                                          SizedBox(
+                                            width: SizeConfig.width! * 1,
+                                          ),
+                                          AnimatedSizeAndFade(
+                                            child: toogledd ? Text(
+                                              "Death Details",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                  fontSize: SizeConfig.height! * 2.5,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w600),
+                                            ): Container(
+                                                height: SizeConfig.height! * 12,
+                                                width: SizeConfig.width! * 20,
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                  children: [
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Padding(
+                                                        padding: EdgeInsets.only(right: 15),
+                                                        child: Text(
+                                                          "DEATH DETAILS",
+                                                          style: GoogleFonts.poppins(
+                                                              fontSize: SizeConfig.height! * 2,
+                                                              color: Colors.black,
+                                                              letterSpacing: 1,
+                                                              fontWeight: FontWeight.w600),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Apply Death Registration",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Generate Death Details",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Property Tax - Tax Calculator",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                            ),
+                                            fadeDuration: const Duration(milliseconds: 300),
+                                            sizeDuration: const Duration(milliseconds: 600),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          GestureDetector(
+                                              onTap: () {
+                                                if (tooglewc == true) {
+                                                  setState(() {
+                                                    tooglewc = false;
+                                                  });
+                                                } else {
+                                                  setState(() {
+                                                    tooglewc = true;
+                                                  });
+                                                }
+                                              },
+                                              child: Icon(
+                                                Icons.chevron_right_outlined,
+                                                size: SizeConfig.height! * 3.5,
+                                                color: Color(0xff223E98),
+                                              )),
+                                          SizedBox(
+                                            width: SizeConfig.width! * 1,
+                                          ),
+                                          AnimatedSizeAndFade(
+                                            child: tooglewc ? Text(
+                                              "Water Charges",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                  fontSize: SizeConfig.height! * 2.5,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.w600),
+                                            ): Container(
+                                                height: SizeConfig.height! * 18,
+                                                width: SizeConfig.width! * 20,
+                                                child: Column(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                  children: [
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Padding(
+                                                        padding: EdgeInsets.only(right: 15),
+                                                        child: Text(
+                                                          "WATER CHARGES",
+                                                          style: GoogleFonts.poppins(
+                                                              fontSize: SizeConfig.height! * 2.2,
+                                                              color: Colors.black,
+                                                              letterSpacing: 1,
+                                                              fontWeight: FontWeight.w600),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Apply New Water Connection",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Track New Water Connection Status",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 View Payment Status",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "📁 Pay Water Charges",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 1.4,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                    Container(
+                                                      alignment: Alignment.centerLeft,
+                                                      child: Text(
+                                                        "DEPARTMENT LOGIN",
+                                                        style: GoogleFonts.poppins(
+                                                            fontSize: SizeConfig.height! * 2,
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w600),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                            ),
+                                            fadeDuration: const Duration(milliseconds: 300),
+                                            sizeDuration: const Duration(milliseconds: 600),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                fadeDuration: const Duration(milliseconds: 300),
+                                sizeDuration: const Duration(milliseconds: 600),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.chevron_right_outlined,
+                                size: SizeConfig.height! * 3.5,
+                                color: Color(0xff223E98),
+                              ),
+                              SizedBox(
+                                width: SizeConfig.width! * 1,
+                              ),
+                              AnimatedSizeAndFade(
+                                child: Text(
+                                  "About Us",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontSize: SizeConfig.height! * 2,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                fadeDuration: const Duration(milliseconds: 300),
+                                sizeDuration: const Duration(milliseconds: 600),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.chevron_right_outlined,
+                                size: SizeConfig.height! * 3.5,
+                                color: Color(0xff223E98),
+                              ),
+                              SizedBox(
+                                width: SizeConfig.width! * 1,
+                              ),
+                              AnimatedSizeAndFade(
+                                child: Text(
+                                  "Terms And Conditions",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontSize: SizeConfig.height! * 2,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                fadeDuration: const Duration(milliseconds: 300),
+                                sizeDuration: const Duration(milliseconds: 600),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.chevron_right_outlined,
+                                size: SizeConfig.height! * 3.5,
+                                color: Color(0xff223E98),
+                              ),
+                              SizedBox(
+                                width: SizeConfig.width! * 1,
+                              ),
+                              AnimatedSizeAndFade(
+                                child: Text(
+                                  "Contact Us",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      fontSize: SizeConfig.height! * 2,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                fadeDuration: const Duration(milliseconds: 300),
+                                sizeDuration: const Duration(milliseconds: 600),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  fadeDuration: const Duration(milliseconds: 300),
+                  sizeDuration: const Duration(milliseconds: 600),
+                ),
+                Container(
+                  height: SizeConfig.height! * 65,
+                  width: SizeConfig.width! * 25,
+                  alignment: Alignment.centerRight,
+                  child: Image.asset("sitemap.jpg"),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    ));
   }
 }
-
