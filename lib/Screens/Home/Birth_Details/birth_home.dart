@@ -176,7 +176,7 @@ class _BirthHomeState extends State<BirthHome> {
                         vertical: SizeConfig.height! * 5),
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("r.png"), fit: BoxFit.fill),
+                            image: AssetImage("r.jpg"), fit: BoxFit.fill),
                         color: Colors.red),
                   )),
                 ],
