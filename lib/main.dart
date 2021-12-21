@@ -3,7 +3,6 @@ import 'package:e_panchayat/main_home.dart';
 import 'package:e_panchayat/Providers/provider.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:e_panchayat/style/appState.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

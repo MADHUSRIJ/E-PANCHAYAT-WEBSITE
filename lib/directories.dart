@@ -4,6 +4,7 @@ import 'package:e_panchayat/Screens/Home/Birth_Details/birth_home.dart';
 import 'package:e_panchayat/Screens/Home/Birth_Details/birthcertificate.dart';
 import 'package:e_panchayat/Screens/Home/Birth_Details/generate_birth.dart';
 import 'package:e_panchayat/Screens/Home/sub_home.dart';
+import 'package:e_panchayat/department_login.dart';
 import 'package:e_panchayat/sizeconfig.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -35,9 +36,11 @@ class _directoryState extends State<directory> {
                           ? const GenerateBirth()
                           : context.watch<provider>().Page == "13"
                               ? const BirthCerti()
-                              : const Center(
-                                  child: Text("Dummy"),
-                                )),
+                              : context.watch<provider>().Page == '123'
+                                  ? const Dept_login()
+                                  : const Center(
+                                      child: Text("Dummy"),
+                                    )),
     ));
   }
 }

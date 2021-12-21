@@ -175,7 +175,8 @@ class _BirthCertiState extends State<BirthCerti> {
                   Container(
                     height: SizeConfig.height! * 5,
                     alignment: Alignment.bottomCenter,
-                    margin: EdgeInsets.symmetric(horizontal: SizeConfig.width!*9) ,
+                    margin:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 9),
                     child: Text(
                       "(Issued under Section 12/17 of the Registration of Birth and Death Act,1969 and Rule 8/13 of Tamil Nadu registration of Birth and Death Rules 2022)",
                       textAlign: TextAlign.center,
@@ -192,9 +193,14 @@ class _BirthCertiState extends State<BirthCerti> {
                   Container(
                     height: SizeConfig.height! * 7,
                     alignment: Alignment.bottomCenter,
-                    margin: EdgeInsets.symmetric(horizontal: SizeConfig.width!*5) ,
+                    margin:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 5),
                     child: Text(
-                      "This is to certify that the following information has been taken from the original record of Birth which is the register for (Ward) WD-18 of City Municipal Corporation of District , Tamilnadu State",
+                      "This is to certify that the following information has been taken from the original record of Birth which is the register for (Ward) WD-18 of " +
+                          context.watch<BirthReq>().District +
+                          " City Municipal Corporation of " +
+                          context.watch<BirthReq>().District +
+                          " District , Tamilnadu State",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black,
@@ -207,8 +213,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -252,8 +258,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -297,8 +303,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -342,8 +348,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -387,8 +393,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -432,8 +438,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -477,8 +483,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -522,8 +528,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -567,8 +573,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -612,8 +618,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -657,8 +663,8 @@ class _BirthCertiState extends State<BirthCerti> {
                     height: SizeConfig.height! * 5,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: SizeConfig.width! * 6),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: SizeConfig.width! * 6),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

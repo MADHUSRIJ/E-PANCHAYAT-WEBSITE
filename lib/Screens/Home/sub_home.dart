@@ -365,21 +365,26 @@ class _HomeSubState extends State<HomeSub> {
                                       SizedBox(
                                         height: SizeConfig.height! * 5,
                                       ),
-                                      Container(
-                                        margin: EdgeInsets.symmetric(
-                                            horizontal: SizeConfig.width! * 5),
-                                        height: SizeConfig.height! * 5,
-                                        alignment: Alignment.center,
-                                        decoration: const BoxDecoration(
-                                          color: Color(0xff223E98),
-                                        ),
-                                        child: Text(
-                                          "Submit",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: SizeConfig.size! * 13,
-                                              letterSpacing: 0.8),
+                                      GestureDetector(
+                                        onTap: (){
+                                          context.read<provider>().set_page('123');
+                                        },
+                                        child: Container(
+                                          margin: EdgeInsets.symmetric(
+                                              horizontal: SizeConfig.width! * 5),
+                                          height: SizeConfig.height! * 5,
+                                          alignment: Alignment.center,
+                                          decoration: const BoxDecoration(
+                                            color: Color(0xff223E98),
+                                          ),
+                                          child: Text(
+                                            "Submit",
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: SizeConfig.size! * 13,
+                                                letterSpacing: 0.8),
+                                          ),
                                         ),
                                       ),
                                     ],

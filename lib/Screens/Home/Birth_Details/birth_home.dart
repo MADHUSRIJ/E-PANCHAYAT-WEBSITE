@@ -178,7 +178,7 @@ class _BirthHomeState extends State<BirthHome> {
                         image: DecorationImage(
                             image: AssetImage("r.jpg"), fit: BoxFit.fill),
                         color: Colors.white),
-                  ))
+                  )),
                 ],
               ),
             )));
