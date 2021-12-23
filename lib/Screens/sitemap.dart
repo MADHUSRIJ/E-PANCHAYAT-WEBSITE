@@ -642,10 +642,10 @@ class _SitemapState extends State<Sitemap> {
                   Expanded(
                     child: Container(
                       height: SizeConfig.height! * 65,
-                      width: SizeConfig.width! * 25,
+                      margin: EdgeInsets.symmetric(horizontal: SizeConfig.width!*5),
                       alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          image: new DecorationImage(
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
                               image: AssetImage("sitemap.jpg"),
                               fit: BoxFit.contain)),
                     ),
